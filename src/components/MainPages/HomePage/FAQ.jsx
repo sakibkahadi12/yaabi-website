@@ -1,4 +1,4 @@
-import { CustomAccordian } from "@/components/CustomComponents/CustomAccordian";
+import { CustomAccordian } from "@/components/CustomComponents/CustomAccordion";
 import { MainDescription } from "@/components/CustomComponents/MainDescription";
 import { MainHeading } from "@/components/CustomComponents/MainHeading";
 

@@ -6,6 +6,7 @@ import { GoodByeSection } from "./GoodByeSection";
 import { HowYaabiWorks } from "./HowYaabiWorks";
 import { Secure } from "./Secure";
 import { SMSMarketing } from "./SMSMarketing";
+import Test from "./Test";
 
 export const HomePageContainer = () => {
   return (
@@ -16,8 +17,9 @@ export const HomePageContainer = () => {
       <SMSMarketing />
       <HowYaabiWorks />
       <FavoriteIntegration />
-      <FAQ />
+      {/* <FAQ /> */}
+      <Test />
       <Secure />
     </>
   );
-}
+};
