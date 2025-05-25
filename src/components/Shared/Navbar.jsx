@@ -141,7 +141,7 @@ export const Navbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/blogs" className={navigationMenuTriggerStyle()}>
+                <Link href="/blog" className={navigationMenuTriggerStyle()}>
                   Blogs
                 </Link>
               </NavigationMenuItem>
@@ -153,7 +153,10 @@ export const Navbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/support" className={navigationMenuTriggerStyle()}>
+                <Link
+                  href="/contact-us"
+                  className={navigationMenuTriggerStyle()}
+                >
                   Contact Us
                 </Link>
               </NavigationMenuItem>
