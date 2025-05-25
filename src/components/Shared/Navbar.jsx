@@ -35,13 +35,13 @@ const featuresLeftSideMenu = [
   },
   {
     title: "Coupon Management",
-    href: "/features/sms-campaign",
+    href: "/features/coupon-management",
     description:
       "Drive sales with product focused and targeted coupon management",
   },
   {
     title: "GDPR Compliant",
-    href: "/features/sms-campaign",
+    href: "/features/gdpr-compliant",
     description:
       "Drive sales with product focused and targeted coupon management",
   },
@@ -49,19 +49,19 @@ const featuresLeftSideMenu = [
 const featuresRightSideMenu = [
   {
     title: "SMS Campaigns",
-    href: "/features/email-marketing",
+    href: "/features/sms-campaign",
     description:
       "The potential of SMS and connect with your most valuable customer",
   },
   {
     title: "Analytics Dashboard",
-    href: "/features/sms-campaign",
+    href: "/features/analytics-dashboard",
     description:
       "Drive sales with product focused and targeted coupon management",
   },
   {
     title: "Easy Automation",
-    href: "/features/sms-campaign",
+    href: "/features/easy-automation",
     description:
       "Drive sales with product focused and targeted coupon management",
   },
