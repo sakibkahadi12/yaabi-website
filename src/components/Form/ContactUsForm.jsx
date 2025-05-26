@@ -11,11 +11,11 @@ export default function ContactUsForm() {
   } = useForm();
 
   const onSubmit = async (data) => {
-   console.log(data)
+    console.log(data);
   };
 
   return (
-    <div className="bg-[url('/assets/bg.svg')] bg-[1110%] sm:bg-[100%] sm:bg-cover bg-no-repeat flex items-center justify-center mt-6 px-4 sm:px-6 lg:px-8  h-screen">
+    <div className="bg-[url('/assets/bg.svg')] bg-[1110%] sm:bg-[100%] sm:bg-cover bg-no-repeat flex items-center justify-center mt-6 px-4 sm:px-6 lg:px-8  lg:h-[calc(100vh-200px)] pb-12">
       <div className="max-w-[402px] w-full ">
         <section className="text-[#000000]">
           <h1 className="font-bold leading-[58px] text-[48px] sm:text-[60px] text-center mb-10 ">

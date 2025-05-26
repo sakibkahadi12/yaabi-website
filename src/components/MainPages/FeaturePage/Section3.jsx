@@ -38,10 +38,12 @@ export const Section3 = () => {
             <div className="size-[56px] mb-6 bg-[#D8E6F3] rounded-[8px] flex justify-center items-center">
               <img src={image} alt={heading} className="size-[24px] " />
             </div>
-            <h3 className="text-[#10243E] font-hanken text-base leading-6 font-semibold lg:text-2xl lg:leading-8">
+            <h3 className="text-[#10243E]   text-base leading-6 font-semibold lg:text-2xl lg:leading-8">
               {heading}
             </h3>
-            <p className="text-[#1A314E] font-hanken text-sm mt-2 font-normal  ">{description}</p>
+            <p className="text-[#1A314E]   text-sm mt-2 font-normal  ">
+              {description}
+            </p>
           </div>
         ))}
       </div>

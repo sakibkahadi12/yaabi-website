@@ -75,7 +75,7 @@ export const Footer = () => {
             </div>
             <p
               className=" text-[#565656] mt-4 
-    font-hanken 
+      
     font-normal 
     text-[clamp(0.75rem,3vw,0.875rem)] 
     leading-[clamp(1rem,3vw,1.25rem)] 
@@ -147,7 +147,7 @@ export const Footer = () => {
         <div
           className=' 
     text-[rgba(0,0,0,0.4)] 
-    font-hanken 
+      
     font-normal 
     text-[clamp(0.75rem,2.5vw,0.875rem)] 
     leading-[clamp(0.75rem,2.5vw,0.875rem)] 

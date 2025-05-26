@@ -30,10 +30,8 @@ export const Template = ({
           {btnText}
         </button>
         <MainHeading heading={heading} align="start" />
-        <div>
-          
-        </div>
-        <p className="text-[rgba(26,49,78,0.6)] font-hanken text-[14px] text-justify sm:text-[15px] font-normal">
+        <div></div>
+        <p className="text-[rgba(26,49,78,0.6)]   text-[14px] text-justify sm:text-[15px] font-normal">
           {description}
         </p>
         <div className="">
@@ -54,14 +52,14 @@ export const Template = ({
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className=" font-hanken text-[20px] font-medium leading-[48px]  text-[#10243ECC] ">
+              <p className="   sm:text-[20px] font-medium leading-[48px]  text-[#10243ECC] ">
                 {item.text}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="text-[#000000] font-hanken text-[16px] sm:text-[20px] leading-5 flex gap-2 items-center font-normal">
+        <p className="text-[#000000]   text-[16px] sm:text-[20px] leading-5 flex gap-2 items-center font-normal">
           {footerText}{" "}
           <span>
             <svg
