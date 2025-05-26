@@ -1,6 +1,6 @@
 
 import { BlogDescription } from "./BlogDescription";
-import BlogHeading from "./BlogHeading"
+
 
 const BlogCard = ({blog}) => {
     console.log(blog)
@@ -9,7 +9,7 @@ const BlogCard = ({blog}) => {
     <div className="flex flex-col bg-[#D8E6F3] rounded-[8px]">
       {/* image sectoin  */}
 
-      <img src={imageUrl} alt="blog" className="sm:h-[296px] rounded-[8px]" />
+      <img src={imageUrl} alt="blog" className="sm:h-[250px] rounded-[8px]" />
 
       {/* text section */}
       <section className="p-4   space-y-3">
