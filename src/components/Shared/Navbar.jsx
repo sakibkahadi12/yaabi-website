@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-
-import { Menu, ChevronDown, ChevronUp,  } from "lucide-react";
+import { Menu, ChevronDown, ChevronUp } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -27,6 +26,7 @@ import {
 import ListItem from "../ui/ListItem";
 import { PrimaryButton } from "../PrimaryButton";
 import { useRouter } from "next/navigation";
+import { dm_sans, hanken } from "@/app/layout";
 
 // export const Icons = {
 //   logo: Home,
@@ -232,7 +232,7 @@ const featuresRightSideMenu = [
 ];
 
 export const Navbar = () => {
-  const router = useRouter()
+  const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [featuresOpen, setFeaturesOpen] = useState(false);
   const toggleDrawer = () => {
@@ -300,7 +300,7 @@ export const Navbar = () => {
                           height={120}
                           className="rounded-md w-full h-[224px] object-cover"
                         />
-                        <p className="text-[#5E97CB] text-[18px] flex items-center gap-0 text-start font-hanken">
+                        <p className="text-[#5E97CB] text-[18px] flex items-center gap-0 text-start  ">
                           Learn more Yaabi{" "}
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -354,7 +354,9 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <section className="hidden  text-[15px] leading-[20px] sm:flex gap-5">
-          <button className="text-[#154D7E]">Login</button>
+          <button className={`text-[#154D7E] ${dm_sans.className}`}>
+            Login
+          </button>
           <PrimaryButton
             bgColor="#154D7E"
             textColor="#ffffff"
@@ -374,54 +376,61 @@ export const Navbar = () => {
             <SheetContent>
               <SheetHeader> </SheetHeader>
               <SheetTitle> </SheetTitle>
-              
-                <nav className="flex flex-col gap-4 text-[16px] mt-10 font-medium text-[#0A2A3C]">
-                  {/* Features Dropdown Toggle */}
-                  <button
-                    onClick={() => setFeaturesOpen(!featuresOpen)}
-                    className="flex  gap-3 items-center w-full text-[15px] text-[#1A314E]"
+
+              <nav
+                className={`flex ${dm_sans.className} flex-col gap-4 text-[16px] mt-10 font-medium text-[#0A2A3C]`}
+              >
+                {/* Features Dropdown Toggle */}
+                <button
+                  onClick={() => setFeaturesOpen(!featuresOpen)}
+                  className="flex  gap-3 items-center w-full text-[15px] text-[#1A314E]"
+                >
+                  Features
+                  {featuresOpen ? (
+                    <ChevronUp size={20} />
+                  ) : (
+                    <ChevronDown size={20} />
+                  )}
+                </button>
+
+                {/* Dropdown Content */}
+                {featuresOpen && (
+                  <div
+                    className={` flex flex-col ${hanken.className} ml-3 justify-start items-start font-semibold  gap-3 text-[15px] text-[#1A314E]`}
                   >
-                    Features
-                    {featuresOpen ? (
-                      <ChevronUp size={20} />
-                    ) : (
-                      <ChevronDown size={20} />
+                    {[...featuresLeftSideMenu, ...featuresRightSideMenu].map(
+                      (item) => (
+                        <Link key={item.title} href={item.href}>
+                          {item.title}
+                        </Link>
+                      )
                     )}
+                  </div>
+                )}
+
+                <div className="gap-3  flex flex-col items-start justify-start text-[15px] text-[#1A314E]">
+                  <Link href="/pricing">Pricing</Link>
+                  <Link href="/blog">Blogs</Link>
+                  <Link href="/support">Support</Link>
+                  <Link href="/contact-us">Contact Us</Link>
+                </div>
+                <div
+                  className={`mt-2 flex flex-col   gap-3 ${hanken.className}`}
+                >
+                  <button
+                    className={`text-[#154D7E] ${dm_sans.className} w-full text-left`}
+                  >
+                    Login
                   </button>
 
-                  {/* Dropdown Content */}
-                  {featuresOpen && (
-                    <div className=" flex flex-col ml-3 justify-start items-start font-semibold  gap-3 text-[15px] text-[#1A314E]">
-                      {[...featuresLeftSideMenu, ...featuresRightSideMenu].map(
-                        (item) => (
-                          <Link key={item.title} href={item.href}>
-                            {item.title}
-                          </Link>
-                        )
-                      )}
-                    </div>
-                  )}
-
-                  <div className="gap-3  flex flex-col items-start justify-start text-[15px] text-[#1A314E]">
-                    <Link href="/pricing">Pricing</Link>
-                    <Link href="/blog">Blogs</Link>
-                    <Link href="/support">Support</Link>
-                    <Link href="/contact-us">Contact Us</Link>
-                  </div>
-                  <div className="mt-2 flex flex-col   gap-3">
-                    <button className="text-[#154D7E] w-full text-left">
-                      Login
-                    </button>
-
-                    <PrimaryButton
-                      bgColor="#154D7E"
-                      textColor="#ffffff"
-                      buttonText="Get Started"
-                      className="w-full"
-                    />
-                  </div>
-                </nav>
-              
+                  <PrimaryButton
+                    bgColor="#154D7E"
+                    textColor="#ffffff"
+                    buttonText="Get Started"
+                    className="w-full"
+                  />
+                </div>
+              </nav>
             </SheetContent>
             <SheetFooter></SheetFooter>
           </Sheet>

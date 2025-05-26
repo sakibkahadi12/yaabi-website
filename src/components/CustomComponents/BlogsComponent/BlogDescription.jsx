@@ -10,7 +10,7 @@ export const BlogDescription = ({
 
   return (
     <p
-      className={`${alignmentClass} font-hanken font-normal text-[clamp(14px,4vw,16px)] leading-[clamp(18px,5vw,20px)]`}
+      className={`${alignmentClass}   font-normal text-[clamp(14px,4vw,16px)] leading-[clamp(18px,5vw,20px)]`}
       style={inlineStyle}
     >
       {description}

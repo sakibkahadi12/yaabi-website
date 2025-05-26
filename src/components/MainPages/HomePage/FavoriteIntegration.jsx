@@ -4,7 +4,7 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 
 export const FavoriteIntegration = () => {
   return (
-    <div className="max-w-[80rem] mx-auto px-5 sm:px-[3.5rem] py-12 grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div className="max-w-[80rem] mx-auto px-5 sm:px-[3.5rem] py-12 grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-5">
       {/* left section */}
       <section>
         <MainHeading

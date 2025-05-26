@@ -1,38 +1,44 @@
-import BlogCard from '@/components/CustomComponents/BlogsComponent/BlogCard';
-import BlogHeading from '@/components/CustomComponents/BlogsComponent/BlogHeading';
-import { MainHeading } from '@/components/CustomComponents/MainHeading';
-import Image from 'next/image';
-import React from 'react'
+"use client";
+import BlogCard from "@/components/CustomComponents/BlogsComponent/BlogCard";
+
+import { MainHeading } from "@/components/CustomComponents/MainHeading";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import React from "react";
 
 const BlogDetailsPage = () => {
-    const blogs = [
-      {
-        key: 1,
-        heading: "Improve your marketing tools with Yaabi",
-        description:
-          "Gliding onto the world stage in 2019, Fuego is ushering in a new era of dance footwear with its uniquely engineered sneakers and a thriving affiliate marketing program powered by Refersion.",
-        imageUrl: "/assets/blog.png",
-      },
-      {
-        key: 3,
-        heading: "Improve your marketing tools with Yaabi",
-        description:
-          "Gliding onto the world stage in 2019, Fuego is ushering in a new era of dance footwear with its uniquely engineered sneakers and a thriving affiliate marketing program powered by Refersion.",
-        imageUrl: "/assets/blog.png",
-      },
-      {
-        key: 2,
-        heading: "Improve your marketing tools with Yaabi",
-        description:
-          "Gliding onto the world stage in 2019, Fuego is ushering in a new era of dance footwear with its uniquely engineered sneakers and a thriving affiliate marketing program powered by Refersion.",
-        imageUrl: "/assets/blog.png",
-      },
-    ];
+  const blogs = [
+    {
+      id: 1,
+      heading: "Improve your marketing tools with Yaabi",
+      description:
+        "Gliding onto the world stage in 2019, Fuego is ushering in a new era of dance footwear with its uniquely engineered sneakers and a thriving affiliate marketing program powered by Refersion.",
+      imageUrl: "/assets/blog.png",
+    },
+    {
+      id: 3,
+      heading: "Improve your marketing tools with Yaabi",
+      description:
+        "Gliding onto the world stage in 2019, Fuego is ushering in a new era of dance footwear with its uniquely engineered sneakers and a thriving affiliate marketing program powered by Refersion.",
+      imageUrl: "/assets/blog.png",
+    },
+    {
+      id: 2,
+      heading: "Improve your marketing tools with Yaabi",
+      description:
+        "Gliding onto the world stage in 2019, Fuego is ushering in a new era of dance footwear with its uniquely engineered sneakers and a thriving affiliate marketing program powered by Refersion.",
+      imageUrl: "/assets/blog.png",
+    },
+  ];
+  const router = useRouter();
   return (
     <div>
       {/* button and title */}
       <section className="flex max-w-[1046px] mx-auto items-center gap-3 mb-7 sm:mb-10">
-        <button className="bg-[#D8E6F3] hover:bg-black flex items-center justify-center rounded-full size-10 ">
+        <button
+          onClick={() => router.back()}
+          className="bg-[#D8E6F3] hover:bg-black flex items-center justify-center rounded-full size-10 "
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -73,14 +79,14 @@ const BlogDetailsPage = () => {
       {/* text editor section */}
       <div className="my-12">text-editor</div>
       {/* Recommended blog section */}
-      <MainHeading align='start' heading="Recommended blogs" />
+      <MainHeading align="start" heading="Recommended blogs" />
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 mt-10">
         {blogs.map((blog) => {
-          return <BlogCard key={blog.key} blog={blog} />;
+          return <BlogCard key={blog.id} blog={blog} />;
         })}
       </div>
     </div>
   );
-}
+};
 
-export default BlogDetailsPage
+export default BlogDetailsPage;

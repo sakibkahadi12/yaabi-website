@@ -17,7 +17,7 @@ export const Secure = () => {
       >
         {/* left side  */}
         <section className=" lg:w-[42%] px-2 sm:px-0 sm:pl-10">
-          <h1 className="text-white font-hanken text-[28px] leading-9 font-bold lg:text-[36px] lg:leading-[48px]">
+          <h1 className="text-white   text-[28px] leading-9 font-bold lg:text-[36px] lg:leading-[48px]">
             Ready to Keep Your Data Secure
           </h1>
           <div className="">
@@ -38,7 +38,7 @@ export const Secure = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <p className=" font-hanken text-[14px] sm:text-[20px] font-medium leading-[48px]  text-[#DEDEDE] ">
+                <p className="   text-[14px] sm:text-[20px] font-medium leading-[48px]  text-[#DEDEDE] ">
                   {item.text}
                 </p>
               </div>

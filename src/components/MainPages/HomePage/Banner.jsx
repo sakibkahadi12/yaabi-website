@@ -5,11 +5,11 @@ export const Banner = () => {
   return (
     <div className="max-w-[80rem] px-5 sm:px-[3.5rem] mx-auto mt-[180px]">
       <section>
-        <h1 className="text-center text-[#14273F] font-hanken font-bold text-[32px] leading-[40px] md:text-[48px] md:leading-[56px] lg:text-[67px] lg:leading-[82px]">
+        <h1 className="text-center text-[#14273F]   font-bold text-[32px] leading-[40px] md:text-[48px] md:leading-[56px] lg:text-[67px] lg:leading-[82px]">
           Boost Your Business with Powerful Email & SMS Marketing
         </h1>
         <p
-          className="text-center mt-10 mb-5 text-[#154D7E] font-hanken font-medium
+          className="text-center mt-10 mb-5 text-[#154D7E]   font-medium
         text-[clamp(16px,4vw,20px)] "
         >
           {" "}

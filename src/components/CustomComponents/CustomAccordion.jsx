@@ -8,21 +8,29 @@ import {
 import React, { useState } from "react";
 
 const CustomAccordion = () => {
-    const [openAccordion, setOpenAccordion] = useState(String(null));
-    const faqData = [
-      {
-        id: 1,
-        title: "Is there a free trial available?",
-        details: "Yes, we have free trial available for our user upto 30 days",
-      },
-      { id: 2, title: "Can I change my plan later?", details: "Yes, we have free trial available for our user upto 30 days" },
-      { id: 3, title: "What is your cancellation policy?", details: "Yes, we have free trial available for our user upto 30 days" },
-      {
-        id: 4,
-        title: "Can other info be added to an invoice?",
-        details: "Yes, we have free trial available for our user upto 30 days",
-      },
-    ];
+  const [openAccordion, setOpenAccordion] = useState(String(null));
+  const faqData = [
+    {
+      id: 1,
+      title: "Is there a free trial available?",
+      details: "Yes, we have free trial available for our user upto 30 days",
+    },
+    {
+      id: 2,
+      title: "Can I change my plan later?",
+      details: "Yes, we have free trial available for our user upto 30 days",
+    },
+    {
+      id: 3,
+      title: "What is your cancellation policy?",
+      details: "Yes, we have free trial available for our user upto 30 days",
+    },
+    {
+      id: 4,
+      title: "Can other info be added to an invoice?",
+      details: "Yes, we have free trial available for our user upto 30 days",
+    },
+  ];
   const plusIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +65,7 @@ const CustomAccordion = () => {
         strokeLinejoin="round"
       />
     </svg>
-  );  
+  );
   return (
     <div className="mt-6 sm:mt-[50px] bg-[#94BEE5] rounded-[24px] ">
       {faqData?.length > 0 ? (
@@ -75,15 +83,17 @@ const CustomAccordion = () => {
       ${isLast ? "rounded-b-[24px] sm:rounded-b-[24px] pb-3 " : ""}
       ${
         openAccordion === String(item?.id)
-          ? "bg-[#FFFFFF] border-[#94BEE5] border rounded-[24px]"
-          : "border-[#447483] "
+          ? "bg-[#FFFFFF]  rounded-[24px]"
+          : " "
       }`}
               >
                 <AccordionTrigger
                   openIcon={plusIcon}
                   closeIcon={closeIcon}
                   className={` ${
-                    isLast ? "" : " border-b pb-7 border-[#7C7C7C1A]"
+                    isLast ? "" : " border-b-2 pb-7 border-[#7C7C7C1A]"
+                  } ${
+                    openAccordion === String(item?.id) ? "border-none" : ""
                   } hover:no-underline text-[#000000] text-[20px]  leading-6 font-medium`}
                 >
                   <div className="items-center flex text-start">

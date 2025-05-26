@@ -1,12 +1,16 @@
-
+"use client";
+import { useRouter } from "next/navigation";
 import { BlogDescription } from "./BlogDescription";
-import BlogHeading from "./BlogHeading"
+import BlogHeading from "./BlogHeading";
 
-const BannerCard = ({blog}) => {
-    console.log(blog)
-    const {heading, author, description, imageUrl} = blog
+const BannerCard = ({ blog }) => {
+  const { heading, author, description, imageUrl, id } = blog;
+  const router = useRouter();
   return (
-    <div className="flex flex-col bg-[#D8E6F3] rounded-[8px]">
+    <div
+      onClick={() => router.push(`/blog/${id}`)}
+      className="flex flex-col bg-[#D8E6F3] rounded-[8px] hover:cursor-pointer"
+    >
       {/* image sectoin  */}
 
       <img src={imageUrl} alt="blog" className="sm:h-[350px] rounded-[8px]" />
@@ -26,6 +30,6 @@ const BannerCard = ({blog}) => {
       </section>
     </div>
   );
-}
+};
 
-export default BannerCard
+export default BannerCard;
